@@ -1,0 +1,2 @@
+MainPackage=d:\Work\Sympli\app\samples\BuildTest\BuildTest.Uwp\bin\x86\Debug\BuildTest.Uwp_1.0.0.0_x86_Debug.appx
+SymbolPackage=D:\out\BuildTest\BuildTest.Uwp_1.0.0.0_Debug_Test\BuildTest.Uwp_1.0.0.0_x86_Debug.appxsym

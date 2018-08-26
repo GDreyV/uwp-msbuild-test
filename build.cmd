@@ -1,0 +1,1 @@
+msbuild.exe BuildTest.sln /nologo /nr:false /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:AppxBundlePlatforms="x86|x64" /p:AppxPackageDir="D:\out\BuildTest" /p:platform="x86" /p:configuration="Debug" /p:VisualStudioVersion="15.0"
