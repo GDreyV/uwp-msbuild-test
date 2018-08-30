@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -40,6 +42,14 @@ namespace BuildTest.Uwp
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
+
+            var loggingPath = System.IO.Path.Combine(ApplicationData.Current.LocalFolder.Path, "log-{Date}.txt");
+            var log = new LoggerConfiguration()
+                .WriteTo.Console()
+                .MinimumLevel.Error()
+                .CreateLogger();
+            log.Information("Initialized");
+
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
